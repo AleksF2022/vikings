@@ -138,8 +138,8 @@ ul {
   font-weight: 300;
   line-height: 84px;
   color: #85ccdc;
-  padding-top: 444px;
-  margin-bottom: 40px;
+  padding-top: 41vh;
+  margin-bottom: 3vh;
 }
 
 .video__text span {
@@ -162,3 +162,63 @@ ul {
   top: -180%;
   background-image: url('../images/youtube-btn.svg');
 }
+
+/* * ==== SEASONS ============ */
+
+.seasons {
+}
+
+.seasons__inner {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  grid-gap: 100px 75px;
+  counter-reset: myCounter;
+}
+.seasons__item {
+  width: 350px;
+  height: 250px;
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-position: center center;
+  list-style-type: none;
+  position: relative;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+.seasons__item:hover .seasons__link {
+  opacity: 1;
+}
+.seasons__item::before {
+  position: absolute;
+  content: "0" counter(myCounter);
+  counter-increment: myCounter;
+  font-weight: 700;
+  font-size: 96px;
+  line-height: 112px;
+  color: #600e09;
+  left: 0;
+  top: -72px;
+  z-index: -1;
+}
+.seasons__item:hover::after {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background: rgba(14, 14, 14, 0.8);
+}
+.seasons__link {
+  font-size: 36px;
+  line-height: 42px;
+  padding: 12px 78px 11px;
+  background-color: #0e0e0e;
+  opacity: 0;
+  transition: all 0.7s;
+  z-index: 2;
+}
+
+/* *====== HEROES ========== */
+
